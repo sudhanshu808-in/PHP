@@ -12,12 +12,15 @@ if (!$conn) {
 else{
     echo "<br>connected";
 }
-$sql="CREATE TABLE student_info (
-    Nname VARCHAR(10),
+$name="skkkkkk";
+$marks=69;
+$sql="CREATE TABLE student(
+    Name VARCHAR(10),
     RollNo NUMBER
-    );"
+    );"; 
 $result = mysqli_query($conn,$sql);
-
+$sql="INSERT INTO student_info(Name,RollNo) VALUES ('$name','$marks')";
+mysqli_query($conn,$sql);
 if($result){echo "database connected";}else{
     echo "<br>database not connected ";
 }
